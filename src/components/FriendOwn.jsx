@@ -62,7 +62,7 @@ const FriendOwn = ( { friendId, name, subtitle, userPicturePath } )=>{
             // came from backend 
             // that have the user's friend's id's that means that url is 
             // having the friends list in the mongodb database.
-            `http://localhost:3001/users/${_id}/${friendId}`
+            `https://backend-j9oc.onrender.com/users/${_id}/${friendId}`
         ,
 
         {

@@ -10,7 +10,7 @@ import PostWidget from "./PostWidget";
     const token = useSelector((state)=> state.token);
 
     const getPosts = async ()=>{
-        const response = await fetch(`http://localhost:3001/posts`,{
+        const response = await fetch(`https://backend-j9oc.onrender.com/posts`,{
             method: "GET",
             headers: {
                 Autorization: `Bearer ${token}`
@@ -22,7 +22,7 @@ import PostWidget from "./PostWidget";
 
     const getUserPosts = async ()=>{
         const response = await fetch(
-            `http://localhost:3001/${userId}/posts`,{
+            `https://backend-j9oc.onrender.com/${userId}/posts`,{
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`

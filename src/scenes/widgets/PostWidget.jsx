@@ -49,7 +49,7 @@ const PostWidget = ({
     const primary = palette.primary.main;
     // patching the database  
     const patchLike = async ()=>{
-        const response = await fetch(`http://localhost:3001/posts/${postId}/like`,{
+        const response = await fetch(`https://backend-j9oc.onrender.com/posts/${postId}/like`,{
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ const PostWidget = ({
             // formData.append("picture",image);
             // formData.append("picturePath",image.name);
         // }
-        const response = await fetch(`http://localhost:3001/posts/${postId}/comment`,{
+        const response = await fetch(`https://backend-j9oc.onrender.com/posts/${postId}/comment`,{
             method: "POST",
             headers: { Authorization: `Bearer ${token}` },
             body: comment,
@@ -117,7 +117,7 @@ const PostWidget = ({
                                             borderRadius: "0.75rem", marginTop: "0.75rem"
                     
                                             }}
-                                            src={`http://localhost:3001/assets/${picturePath}`}
+                                            src={`https://backend-j9oc.onrender.com/assets/${picturePath}`}
                                             
                                         />
                                     )}
@@ -229,7 +229,7 @@ const PostWidget = ({
                                 borderRadius: "0.75rem", marginTop: "0.75rem"
 
                                 }}
-                                src={`http://localhost:3001/assets/${picturePath}`}
+                                src={`https://backend-j9oc.onrender.com/assets/${picturePath}`}
                                 
                             />
                         )}

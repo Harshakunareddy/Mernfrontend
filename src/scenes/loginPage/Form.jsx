@@ -74,7 +74,7 @@ const Form = ()=>{
         }
         formData.append("picturePath", values.picture.name);
 
-        const savedUserResponse = await fetch("http://localhost:3001/auth/register",{
+        const savedUserResponse = await fetch("https://backend-j9oc.onrender.com/auth/register",{
             method: "POST",
             body: formData,
         });
@@ -94,7 +94,7 @@ const Form = ()=>{
     // then there will be code available to check that the user is valid or not
     // and it sends the json formatted code as a response.
     const login = async (values, onSubmitProps)=>{
-        const loggedInResponse = await fetch("http://localhost:3001/auth/login",{
+        const loggedInResponse = await fetch("https://backend-j9oc.onrender.com/auth/login",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
             // stringfy : converts js values to json
